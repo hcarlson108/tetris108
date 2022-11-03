@@ -35,7 +35,7 @@ let gameBoardArray = [...Array(gBArrayHeight)].map((e) =>
 ); //creates gameboard array
 
 let DIRECTION = {
-  //used to tract the direction of tetrominos
+  //used to track the direction of tetrominos
   IDLE: 0,
   DOWN: 1,
   LEFT: 2,
@@ -117,19 +117,19 @@ function HandleKeyPress(key) {
     }
   } else if (key.keyCode === 68) {
     //if the user clicks the 'd' key
+    direction = DIRECTION.RIGHT;
     if (!HittingTheWall()) {
       DeleteTetromino();
       startX++;
       DrawTetromino();
     }
-    direction = DIRECTION.RIGHT;
   } else if (key.keyCode === 83) {
+    direction = DIRECTION.DOWN;
     if (!HittingTheWall()) {
       DeleteTetromino();
       startY++;
       DrawTetromino();
     }
-    direction = DIRECTION.DOWN;
   }
 }
 
