@@ -9,12 +9,25 @@ let startY = 0; //down 0
 let coordinateArray = [...Array(gBArrayHeight)].map((e) =>
   Array(gBArrayWidth).fill(0)
 );
-let curTetromino = [
+
+let curTetromino = [ //current tetromino holds coordinates of a tetris shape
   [1, 0],
   [0, 1],
   [1, 1],
   [2, 1],
-]; //current tetromino holds coordinates of a tetris shape
+]; 
+
+let tetrominos = [];
+let tetrominoColors = [
+  'purple',
+  'cyan',
+  'blue',
+  'yellow',
+  'orange',
+  'green',
+  'red',
+]; //all possible colors
+let curTetrominoColor;
 
 /* class made up of coordinates of x and y, which will match with our coordinate array which will look up where 
    we want to draw our tetrimominos */
@@ -62,5 +75,8 @@ function SetupCanvas() {
 }
 
 function DrawTetromino() {
-  for (let i = 0; i < curTetromino.length; i++) {}
+  for (let i = 0; i < curTetromino.length; i++) {
+    let x = curTetromino[i][0] + startX;
+    let y = curTetromino[i][1] + startY;
+  }
 }
