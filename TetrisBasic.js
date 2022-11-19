@@ -1,5 +1,3 @@
-//bare with me
-
 let canvas; //reference to canvas; what we will be drawing on
 let ctx; //reference to our context; functions for drawing on canvas
 let gBArrayHeight = 20; //gameboard array height
